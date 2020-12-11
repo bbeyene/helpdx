@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<title>Services in Portland</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<body>
+<div class=nav>
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('service') }}">Services</a>
+<a href="{{ url_for('volunteer') }}">Volunteers</a>
+<a href="{{ url_for('create_service') }}">Ask for Help</a>
+<a href="{{ url_for('create_volunteer') }}">Offer Help</a>
+</div>
+<div class=page>
+	<h2>HELPDX</h2>
+	{% block content %}{% endblock %}
+</div>
+</body>
+</html>

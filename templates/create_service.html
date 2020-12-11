@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Ask for Help</h3>
+    <p class="error">{{ errors }}</p>
+    <form action="{{ url_for('create_service') }}" method=post></p>
+	    <p class="heading">Name: <input type=text name=name {% if name: %} value="{{name}}" {% endif %} required></p>
+	<p class="heading">Description:</p>
+	<textarea rows=5 cols=50 name=description required>{% if description: %}{{description}}{% endif %}</textarea>
+	<p class="heading">Street Address: <input type=text name=street_address required {% if address: %} value="{{address['street_address']}}" {% endif %}></p>
+	<p class="heading">City: <input type=text name=city required {% if address: %} value="{{address['city']}}" {% endif %}></p>
+	<p class="heading">State: <input type=text name=state required {% if address: %} value="{{address['state']}}" {% endif %} ></p>
+	<p class="heading">Zipcode: <input type=number min=0 max=99999 name=zipcode required {% if address: %} value="{{address['zipcode']}}" {% endif %}</p>
+	<p class="heading">Phone Number: <input type=text name=phone_number value="{{phone_number}}"></p>
+	<p class="heading">Hours of Operation: <input type=text name=hours_of_operation value="{{hours_of_operation}}"></p>
+	<p class="heading">Hours Needed: <input type=number min=0 max=40 name=hours_needed value="{{hours_needed}}"></p>
+	<p><input type=submit value=Create></p>
+    </form>
+{% endblock %}

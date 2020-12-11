@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h3>Services</h3>
+    {% for service in services %}
+        <div class=entry>
+	<table>
+		<thead>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					{{ service.name }}
+				</td>
+				<td>
+					{{ service.street_address }}
+				</td>
+				<td>
+					{{ service.city }}
+				</td>
+				<td>
+					{{ service.state }}
+				</td>
+				<td>
+					{{ service.zipcode }}
+				</td>
+				<td>
+					{{ service.phone_number }}
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					{{ service.description }}
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					Hours of Operation: {{ service.hours_of_operation }}
+				</td>
+				<td>
+					Hours Needed: {{ service.hours_needed}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+    {% endfor %}
+
+{% endblock %}
