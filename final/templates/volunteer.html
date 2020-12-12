@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h3>Volunteers</h3>
+    {% for volunteer in volunteers %}
+        <div class=entry>
+	<table>
+		<thead>
+		<thead>
+		<tbody>
+			<tr>
+				<td>
+					{{ volunteer.name }}
+				</td>
+				<td colspan="2">
+					{{ volunteer.expertise }}
+				</td>
+			<tr>
+			<tr>
+				<td>
+					{{ volunteer.phone_number }}
+				</td>
+				<td>
+					{{ volunteer.email }}
+				</td>
+				<td>
+					Hours Offered: {{ volunteer.hours_offered }}
+				</td>
+			<tr>
+		</tbody>
+	</table>
+	</div>
+    {% endfor %}
+
+{% endblock %}
