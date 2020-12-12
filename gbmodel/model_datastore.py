@@ -44,7 +44,7 @@ def volunteers_from_datastore(entity):
 
 class model(Model):
     def __init__(self):
-        self.client = datastore.Client('cloud-f20-bruh-beyene-bbeyene')
+        self.client = datastore.Client('helpdx-demo')
 
     def select_service(self):
         """
